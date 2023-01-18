@@ -1,11 +1,11 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("node-sass"));
 const connect = require("gulp-connect");
-var rename = require("gulp-rename");
+const rename = require("gulp-rename");
 
 function styles(done) {
   gulp
-    .src(["./src/scss/*.scss"])
+    .src("./src/scss/*.scss")
     .pipe(
       sass({
         includePaths: ["./src/scss"],
@@ -17,7 +17,7 @@ function styles(done) {
 }
 
 function js(done) {
-  gulp.src(["./src/js/*.js"]).pipe(gulp.dest("./srv/js/"));
+  gulp.src("./src/js/*.js").pipe(gulp.dest("./srv/js/"));
   gulp
     .src("./node_modules/es6-scroll-to/lib/index.js")
     .pipe(rename("es6-scroll-to.js"))
@@ -27,6 +27,11 @@ function js(done) {
 
 function html(done) {
   gulp.src("./src/*.html").pipe(gulp.dest("./srv/"));
+  done();
+}
+
+function assets(done) {
+  gulp.src("./assets/*").pipe(gulp.dest("./srv/assets/"));
   done();
 }
 
@@ -49,6 +54,7 @@ function livereload(done) {
 }
 
 function watch() {
+  gulp.watch("./assets/*", gulp.series(assets));
   gulp.watch("./src/*.html", gulp.series(html));
   gulp.watch("./src/js/*.js", gulp.series(js));
   gulp.watch("./src/scss/*.scss", gulp.series(styles));
@@ -62,4 +68,5 @@ exports.connectOpen = connectOpen;
 exports.livereload = livereload;
 exports.js = js;
 exports.html = html;
-exports.default = gulp.parallel(styles, js, html, connection, connectOpen, watch);
+exports.assets = assets;
+exports.default = gulp.parallel(styles, js, html, assets, connection, connectOpen, watch);
