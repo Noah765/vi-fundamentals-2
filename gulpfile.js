@@ -18,10 +18,6 @@ function styles(done) {
 
 function js(done) {
   gulp.src("./src/js/*.js").pipe(gulp.dest("./srv/js/"));
-  gulp
-    .src("./node_modules/es6-scroll-to/lib/index.js")
-    .pipe(rename("es6-scroll-to.js"))
-    .pipe(gulp.dest("./srv/js/"));
   done();
 }
 

@@ -34,9 +34,10 @@ button:active {
   }
 }
 
-$secondary: #f08080;
-$background: #ecede9;
 .cta {
+  $secondary: #f08080;
+  $background: #ecede9;
+
   display: flex;
 
   &__text {
@@ -84,5 +85,31 @@ $background: #ecede9;
 
   &--red_headline &__text &__text__title {
     color: $secondary;
+  }
+}
+
+.contact_textbox {
+  $background: #303c54;
+  height: 0;
+  transition: height 0.5s ease-out;
+
+  &__textbox {
+    position: fixed;
+    bottom: -365px;
+    transition: bottom 0.5s ease-out;
+    left: 0;
+    right: 0;
+    background-color: $background;
+    color: white;
+    padding: 20px 0 250px 15%;
+
+    &__decoration {
+      position: absolute;
+      top: -9px;
+      rotate: 45deg;
+      width: 18px;
+      height: 18px;
+      background-color: $background;
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "dev-fe-onboarding-miniframework",
+  "name": "vi-internship-fundamentals-2",
   "version": "1.0.0",
   "description": "This amazing framework is almost perfect, it just needs a little bit of work to be finished.",
   "main": "index.js",
@@ -20,7 +20,6 @@
     "gulp": "^4.0.2"
   },
   "dependencies": {
-    "es6-scroll-to": "^1.1.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-connect": "^5.7.0",
     "gulp-imagemin": "^8.0.0",
