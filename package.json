@@ -1,0 +1,36 @@
+{
+  "name": "dev-fe-onboarding-miniframework",
+  "version": "1.0.0",
+  "description": "This amazing framework is almost perfect, it just needs a little bit of work to be finished.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtualidentityag/dev-fe-onboarding-miniframework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virtualidentityag/dev-fe-onboarding-miniframework/issues"
+  },
+  "homepage": "https://github.com/virtualidentityag/dev-fe-onboarding-miniframework#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "es6-scroll-to": "^1.1.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-size": "^4.0.1",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^8.0.0",
+    "open": "^8.4.0",
+    "opn": "^6.0.0"
+  }
+}
